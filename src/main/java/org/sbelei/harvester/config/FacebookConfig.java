@@ -16,13 +16,17 @@ import org.springframework.social.facebook.connect.FacebookConnectionFactory;
  * @author sbelei
  *
  */
-
+@Deprecated
 @Configuration
-public class SocialConfig implements SocialConfigurer{
+public class FacebookConfig implements SocialConfigurer{
 
 	@Override
 	public void addConnectionFactories(ConnectionFactoryConfigurer connectionFactoryConfigurer,
 			Environment environment) {
+		/*
+		 * Obtain facebook.clientId like here:
+		 * https://developers.facebook.com/docs/apps/register
+		 */
 		connectionFactoryConfigurer.addConnectionFactory(new FacebookConnectionFactory(
 				environment.getProperty("facebook.clientId"),
 				environment.getProperty("facebook.clientSecret")));

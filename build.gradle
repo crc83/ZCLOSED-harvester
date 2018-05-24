@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.1.RELEASE'
+		springBootVersion = '2.0.2.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -25,9 +25,12 @@ repositories {
 
 
 dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-webflux'
 	compile 'org.springframework.boot:spring-boot-starter-activemq'
 	compile 'org.springframework.boot:spring-boot-starter-data-rest'
-    compile 'org.springframework.social:spring-social-facebook:2.0.3.RELEASE'
+    compile 'org.springframework.social:spring-social-facebook:latest.release'
+    compile 'com.github.spring-social:spring-social-google:latest.release'
 	compileOnly 'org.projectlombok:lombok'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
+	testCompile 'io.projectreactor:reactor-test'
 }
