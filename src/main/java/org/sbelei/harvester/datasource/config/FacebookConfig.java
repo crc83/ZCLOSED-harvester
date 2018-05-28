@@ -1,4 +1,4 @@
-package org.sbelei.harvester.config;
+package org.sbelei.harvester.datasource.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

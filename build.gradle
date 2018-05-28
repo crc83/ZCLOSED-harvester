@@ -28,7 +28,7 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-devtools'
 	compile 'org.springframework.boot:spring-boot-starter-webflux'
 	compile 'org.springframework.boot:spring-boot-starter-activemq'
-	compile 'org.springframework.boot:spring-boot-starter-data-rest'
+	//compile 'org.springframework.boot:spring-boot-starter-data-rest:latest.release'
     compile 'org.springframework.social:spring-social-facebook:latest.release'
     compile 'com.github.spring-social:spring-social-google:latest.release'
 	compileOnly 'org.projectlombok:lombok'
