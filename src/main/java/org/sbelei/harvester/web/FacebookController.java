@@ -22,14 +22,14 @@ public class FacebookController {
     }
 
     @GetMapping("facebook")
-    public Mono<String> helloFacebook(Model model) {
+    public String helloFacebook(Model model) {
         if (connectionRepository.findPrimaryConnection(Facebook.class) == null) {
-            return Mono.just("redirect:/connect/facebook");
+            return "redirect:/connect/facebook";
         }
 
         model.addAttribute("facebookProfile", facebook.userOperations().getUserProfile());
         PagedList<Post> feed = facebook.feedOperations().getFeed();
         model.addAttribute("feed", feed);
-        return Mono.just("hello");
+        return "hello";
     }
 }
