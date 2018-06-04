@@ -21,6 +21,7 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	//maven { url 'https://jitpack.io' } //for com.github.robertdale:tinkerpop-spring-boot-starter:latest.release
 }
 
 
@@ -28,10 +29,20 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-devtools'
 	compile 'org.springframework.boot:spring-boot-starter-webflux'
 	compile 'org.springframework.boot:spring-boot-starter-activemq'
+	//github https://github.com/robertdale/tinkerpop-spring-boot
+	//compile 'com.github.robertdale.tinkerpop-spring-boot:tinkerpop-spring-boot:0.0.1'
 	//compile 'org.springframework.boot:spring-boot-starter-data-rest:latest.release'
+    compile 'org.springframework.social:spring-social-core:latest.release'
+    compile 'org.springframework.social:spring-social-config:latest.release'
+    compile 'org.springframework.social:spring-social-web:latest.release'
     compile 'org.springframework.social:spring-social-facebook:latest.release'
     compile 'com.github.spring-social:spring-social-google:latest.release'
+    compile 'org.apache.tinkerpop:gremlin-core:3.3.3'
+    
 	compileOnly 'org.projectlombok:lombok'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 	testCompile 'io.projectreactor:reactor-test'
+    testCompile 'org.apache.tinkerpop:gremlin-test:3.3.3'
+    testCompile 'org.apache.tinkerpop:tinkergraph-gremlin:3.3.3'
+    
 }
